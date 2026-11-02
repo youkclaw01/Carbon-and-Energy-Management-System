@@ -1,0 +1,1 @@
+Azure 공식 아이콘: Microsoft Azure Public Service Icons V24 (https://learn.microsoft.com/azure/architecture/icons/). 형태·색을 변경하지 않고 그대로 사용. Microsoft 아이콘 사용 약관을 따른다.

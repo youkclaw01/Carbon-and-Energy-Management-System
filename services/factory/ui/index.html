@@ -1,0 +1,14 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AMA 공장 현장 운영 콘솔</title><link rel="stylesheet" href="app.css"></head>
+<body>
+<header class="top"><div class="brand"><b>AMA</b><span>Factory Console</span></div>
+  <div class="site"><b id="siteName">–</b><span id="vmName" class="mut">–</span></div>
+  <div class="chips"><span class="chip sim" title="모든 값은 합성 자료입니다">시뮬레이션 · 합성 자료</span><span class="chip" id="shiftChip">교대 –</span><span class="chip" id="brkChip" hidden>휴식 시간</span></div>
+  <div class="grow"></div>
+  <div class="link" id="linkBox"><i class="dot" id="linkDot"></i><span id="linkTxt">연결 확인 중</span></div>
+  <div class="clock"><b id="clock">--:--:--</b><span class="mut" id="tzl">KST</span></div></header>
+<nav class="side" id="nav"></nav>
+<main id="view"></main>
+<aside id="drawer" class="drawer" hidden></aside>
+<script src="app.js"></script></body></html>

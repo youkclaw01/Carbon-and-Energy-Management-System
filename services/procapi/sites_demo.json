@@ -1,0 +1,30 @@
+{
+ "id": "ama-demo-sites-20261101",
+ "mode": "SIMULATED",
+ "note": "공장별 5년 모의 이력(gen_history.py)을 나라별로 합산. 일본 4곳 40 Mt, 싱가포르 3곳 10 Mt 기준(사용자 지정). 실제 값이 아니다.",
+ "sites": {
+  "JP": {
+   "site": "일본 4개 공장 합계(모의)",
+   "plants": [
+    "JP-01",
+    "JP-02",
+    "JP-03",
+    "JP-04"
+   ],
+   "emission2025": 39343084,
+   "emission2026Ytd": 32279314,
+   "monthsYtd": 10
+  },
+  "SG": {
+   "site": "싱가포르 3개 공장 합계(모의)",
+   "plants": [
+    "SG-01",
+    "SG-02",
+    "SG-03"
+   ],
+   "emission2025": 9843049,
+   "emission2026Ytd": 8113894,
+   "monthsYtd": 10
+  }
+ }
+}

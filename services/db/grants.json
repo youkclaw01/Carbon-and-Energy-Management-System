@@ -1,0 +1,211 @@
+{
+ "carbon": {
+  "ddl": "db02_carbon.sql",
+  "identities": [
+   {
+    "name": "id-cems-prd-krc-calc",
+    "cid": "82c0d9fd-73f0-49ca-b5d0-9acf3d076455",
+    "grants": [
+     "GRANT SELECT, INSERT, UPDATE ON dbo.CalcRun TO [id-cems-prd-krc-calc]",
+     "GRANT SELECT, INSERT, UPDATE ON dbo.ReleaseCommand TO [id-cems-prd-krc-calc]",
+     "GRANT SELECT, INSERT ON dbo.CalcCandidate TO [id-cems-prd-krc-calc]",
+     "GRANT SELECT, INSERT ON dbo.ValidationResult TO [id-cems-prd-krc-calc]",
+     "GRANT SELECT, INSERT ON dbo.ScenarioResult TO [id-cems-prd-krc-calc]",
+     "GRANT SELECT, INSERT ON dbo.IdempotencyEntry TO [id-cems-prd-krc-calc]",
+     "GRANT SELECT, INSERT ON dbo.CarbonAudit TO [id-cems-prd-krc-calc]",
+     "GRANT SELECT ON dbo.MethodologyVersion TO [id-cems-prd-krc-calc]",
+     "GRANT SELECT ON dbo.FactorVersionRef TO [id-cems-prd-krc-calc]",
+     "GRANT SELECT ON dbo.Release TO [id-cems-prd-krc-calc]",
+     "GRANT SELECT ON dbo.ReleaseHead TO [id-cems-prd-krc-calc]",
+     "GRANT SELECT ON dbo.ReleaseStatusHistory TO [id-cems-prd-krc-calc]"
+    ]
+   },
+   {
+    "name": "id-cems-prd-krc-release",
+    "cid": "5eef9247-3452-4305-b621-b23cb2908bd7",
+    "grants": [
+     "GRANT SELECT, INSERT, UPDATE ON dbo.Release TO [id-cems-prd-krc-release]",
+     "GRANT SELECT, INSERT, UPDATE ON dbo.ReleaseHead TO [id-cems-prd-krc-release]",
+     "GRANT SELECT, INSERT, UPDATE ON dbo.PublicationOutbox TO [id-cems-prd-krc-release]",
+     "GRANT SELECT, INSERT, UPDATE ON dbo.ReleaseCommand TO [id-cems-prd-krc-release]",
+     "GRANT SELECT, INSERT ON dbo.ReleaseStatusHistory TO [id-cems-prd-krc-release]",
+     "GRANT SELECT, INSERT ON dbo.CarbonAudit TO [id-cems-prd-krc-release]",
+     "GRANT SELECT ON dbo.CalcRun TO [id-cems-prd-krc-release]",
+     "GRANT SELECT ON dbo.ValidationResult TO [id-cems-prd-krc-release]",
+     "GRANT SELECT ON dbo.CalcCandidate TO [id-cems-prd-krc-release]"
+    ]
+   }
+  ]
+ },
+ "evidence": {
+  "ddl": "db06_evidence.sql",
+  "identities": [
+   {
+    "name": "id-cems-prd-krc-evidence",
+    "cid": "bf845843-6ff1-487d-9de5-2608d154e2de",
+    "grants": [
+     "GRANT SELECT, INSERT, UPDATE ON dbo.EvidenceRequest TO [id-cems-prd-krc-evidence]",
+     "GRANT SELECT, INSERT ON dbo.EvidenceManifest TO [id-cems-prd-krc-evidence]",
+     "GRANT SELECT, INSERT ON dbo.EvidenceItemRef TO [id-cems-prd-krc-evidence]",
+     "GRANT SELECT, INSERT ON dbo.LineageRef TO [id-cems-prd-krc-evidence]",
+     "GRANT SELECT, INSERT ON dbo.SignatureRef TO [id-cems-prd-krc-evidence]",
+     "GRANT SELECT, INSERT ON dbo.AuditPackage TO [id-cems-prd-krc-evidence]",
+     "GRANT SELECT, INSERT ON dbo.EvidenceAccessAudit TO [id-cems-prd-krc-evidence]",
+     "GRANT SELECT, INSERT, UPDATE ON dbo.SigningKeyStatus TO [id-cems-prd-krc-evidence]"
+    ]
+   }
+  ]
+ },
+ "approval": {
+  "ddl": "db07_approval.sql",
+  "identities": [
+   {
+    "name": "id-cems-prd-krc-approval",
+    "cid": "8c7ab850-131c-4835-95ec-dfdddd61c00a",
+    "grants": [
+     "GRANT SELECT, INSERT, UPDATE ON dbo.ApprovalRequest TO [id-cems-prd-krc-approval]",
+     "GRANT SELECT, INSERT ON dbo.PolicyEvaluation TO [id-cems-prd-krc-approval]",
+     "GRANT SELECT, INSERT ON dbo.ApprovalDecision TO [id-cems-prd-krc-approval]",
+     "GRANT SELECT, INSERT ON dbo.ApprovalAudit TO [id-cems-prd-krc-approval]",
+     "GRANT SELECT, INSERT, UPDATE ON dbo.AppUser TO [id-cems-prd-krc-approval]",
+     "GRANT SELECT, INSERT, UPDATE ON dbo.AppSession TO [id-cems-prd-krc-approval]",
+     "GRANT SELECT, INSERT, UPDATE ON dbo.UserGrant TO [id-cems-prd-krc-approval]",
+     "GRANT SELECT, INSERT, UPDATE ON dbo.AppSetting TO [id-cems-prd-krc-approval]",
+     "GRANT SELECT, INSERT, UPDATE ON dbo.MailOutbox TO [id-cems-prd-krc-approval]",
+     "GRANT SELECT, INSERT, UPDATE ON dbo.PasskeyCredential TO [id-cems-prd-krc-approval]",
+     "GRANT SELECT, INSERT, UPDATE ON dbo.PasskeyChallenge TO [id-cems-prd-krc-approval]",
+     "GRANT SELECT, INSERT, UPDATE ON dbo.LimitAccount TO [id-cems-prd-krc-approval]",
+     "GRANT SELECT, INSERT, UPDATE ON dbo.LimitReservation TO [id-cems-prd-krc-approval]",
+     "GRANT SELECT, INSERT, UPDATE ON dbo.ExecutionPermit TO [id-cems-prd-krc-approval]"
+    ]
+   }
+  ]
+ },
+ "footprint": {
+  "ddl": "db05_footprint.sql",
+  "identities": [
+   {
+    "name": "id-cems-prd-krc-footprint",
+    "cid": "1933ebb6-44c4-42e2-ab8f-47985119e65e",
+    "grants": [
+     "GRANT SELECT, INSERT, UPDATE ON dbo.CustomerRequest TO [id-cems-prd-krc-footprint]",
+     "GRANT SELECT, INSERT, UPDATE ON dbo.DisclosureHead TO [id-cems-prd-krc-footprint]",
+     "GRANT SELECT, INSERT, UPDATE ON dbo.SourceStateProjection TO [id-cems-prd-krc-footprint]",
+     "GRANT SELECT, INSERT ON dbo.QuoteFootprint TO [id-cems-prd-krc-footprint]",
+     "GRANT SELECT, INSERT ON dbo.DisclosureRelease TO [id-cems-prd-krc-footprint]",
+     "GRANT SELECT, INSERT ON dbo.Revocation TO [id-cems-prd-krc-footprint]",
+     "GRANT SELECT, INSERT ON dbo.FootprintAudit TO [id-cems-prd-krc-footprint]"
+    ]
+   }
+  ]
+ },
+ "export": {
+  "ddl": "db09_export.sql",
+  "identities": [
+   {
+    "name": "id-cems-prd-krc-export",
+    "cid": "16268280-e3c0-4902-b849-d3e625b4bd41",
+    "grants": [
+     "GRANT SELECT, INSERT, UPDATE ON dbo.ExportRelease TO [id-cems-prd-krc-export]",
+     "GRANT SELECT, INSERT ON dbo.ExportAudit TO [id-cems-prd-krc-export]",
+     "GRANT SELECT ON dbo.DataPolicyVersion TO [id-cems-prd-krc-export]",
+     "GRANT SELECT ON dbo.ExportOutbox TO [id-cems-prd-krc-export]",
+     "GRANT SELECT ON dbo.ExportAck TO [id-cems-prd-krc-export]"
+    ]
+   }
+  ]
+ },
+ "corporate": {
+  "ddl": "db10_corporate.sql",
+  "identities": [
+   {
+    "name": "id-cems-prd-krc-cquery",
+    "cid": "a9083b8c-fa69-43f1-a10c-fcd20cacda6a",
+    "grants": [
+     "GRANT SELECT, INSERT ON dbo.FederationInbox TO [id-cems-prd-krc-cquery]",
+     "GRANT SELECT, INSERT ON dbo.CentralReadAudit TO [id-cems-prd-krc-cquery]",
+     "GRANT SELECT, INSERT, UPDATE ON dbo.AuthorityState TO [id-cems-prd-krc-cquery]",
+     "GRANT SELECT, INSERT, UPDATE ON dbo.PortfolioProjection TO [id-cems-prd-krc-cquery]"
+    ]
+   }
+  ]
+ },
+ "workflow": {
+  "ddl": "db12_workflow.sql",
+  "identities": [
+   {
+    "name": "id-cems-prd-krc-workflow",
+    "cid": "faa62541-a811-4943-ad85-8c13d5d37b96",
+    "grants": [
+     "GRANT SELECT, INSERT, UPDATE ON dbo.Job TO [id-cems-prd-krc-workflow]",
+     "GRANT SELECT, INSERT, UPDATE ON dbo.StepAttempt TO [id-cems-prd-krc-workflow]",
+     "GRANT SELECT, INSERT, UPDATE ON dbo.Timer TO [id-cems-prd-krc-workflow]",
+     "GRANT SELECT, INSERT ON dbo.[Checkpoint] TO [id-cems-prd-krc-workflow]",
+     "GRANT SELECT, INSERT ON dbo.TransitionAudit TO [id-cems-prd-krc-workflow]"
+    ]
+   }
+  ]
+ },
+ "execution": {
+  "ddl": "db08_execution.sql",
+  "identities": [
+   {
+    "name": "id-cems-prd-krc-exec",
+    "cid": "6f0fbc8f-a2ab-4eae-81fd-982c48d8a23f",
+    "grants": [
+     "GRANT SELECT, INSERT, UPDATE ON dbo.ExecutionIntentRef TO [id-cems-prd-krc-exec]",
+     "GRANT SELECT, INSERT, UPDATE ON dbo.ExecutionAttempt TO [id-cems-prd-krc-exec]",
+     "GRANT SELECT, INSERT, UPDATE ON dbo.PermitGate TO [id-cems-prd-krc-exec]",
+     "GRANT SELECT, INSERT ON dbo.ExternalReceipt TO [id-cems-prd-krc-exec]",
+     "GRANT SELECT, INSERT ON dbo.ExecutionAudit TO [id-cems-prd-krc-exec]"
+    ]
+   }
+  ]
+ },
+ "agents": {
+  "ddl": "db11_agents.sql",
+  "identities": [
+   {
+    "name": "id-cems-prd-krc-agent",
+    "cid": "85cfd842-fef8-45bb-88f0-ab7d3035e4a8",
+    "grants": [
+     "GRANT SELECT, INSERT, UPDATE ON dbo.AgentRun TO [id-cems-prd-krc-agent]",
+     "GRANT SELECT, INSERT ON dbo.ToolCallAudit TO [id-cems-prd-krc-agent]",
+     "GRANT SELECT, INSERT ON dbo.EvaluationRef TO [id-cems-prd-krc-agent]",
+     "GRANT SELECT, INSERT ON dbo.DraftArtifact TO [id-cems-prd-krc-agent]",
+     "GRANT SELECT, INSERT ON dbo.RunAudit TO [id-cems-prd-krc-agent]"
+    ]
+   }
+  ]
+ },
+ "planning": {
+  "ddl": "db03_planning.sql",
+  "identities": [
+   {
+    "name": "id-cems-prd-krc-plan",
+    "cid": "2e3e6768-04f1-4b54-be0b-b70859549b2e",
+    "grants": [
+     "GRANT SELECT, INSERT, UPDATE ON dbo.SimulationRun TO [id-cems-prd-krc-plan]",
+     "GRANT SELECT, INSERT ON dbo.PlanningInput TO [id-cems-prd-krc-plan]",
+     "GRANT SELECT, INSERT ON dbo.Scenario TO [id-cems-prd-krc-plan]",
+     "GRANT SELECT, INSERT ON dbo.PlanningAudit TO [id-cems-prd-krc-plan]"
+    ]
+   }
+  ]
+ },
+ "procurement": {
+  "ddl": "db04_procurement.sql",
+  "identities": [
+   {
+    "name": "id-cems-prd-krc-proc",
+    "cid": "6f0064e1-07e0-4552-8d5b-0d8955cfc385",
+    "grants": [
+     "GRANT SELECT, INSERT, UPDATE ON dbo.BusinessOperation TO [id-cems-prd-krc-proc]",
+     "GRANT SELECT, INSERT, UPDATE ON dbo.ProcurementIntent TO [id-cems-prd-krc-proc]",
+     "GRANT SELECT, INSERT ON dbo.PositionSnapshot TO [id-cems-prd-krc-proc]",
+     "GRANT SELECT, INSERT ON dbo.ProcurementAudit TO [id-cems-prd-krc-proc]"
+    ]
+   }
+  ]
+ }
+}

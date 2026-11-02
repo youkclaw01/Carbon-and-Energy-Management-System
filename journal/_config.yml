@@ -1,0 +1,9 @@
+title: "Living Only for Today"
+description: "A scrappy day-by-day diary of building a carbon and energy cost operations system with an AI agent"
+lang: en
+timezone: Asia/Seoul
+baseurl: "/living-only-for-today"
+url: "https://youkclaw01.github.io"
+markdown: kramdown
+permalink: /:year/:month/:day/:title/
+exclude: [README.md, tools]

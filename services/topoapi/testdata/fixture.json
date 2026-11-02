@@ -1,0 +1,100 @@
+{
+ "rows": [
+  {
+   "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-a/providers/Microsoft.Network/virtualNetworks/vnet-1",
+   "name": "vnet-1",
+   "type": "microsoft.network/virtualnetworks",
+   "location": "koreacentral",
+   "resourceGroup": "rg-a",
+   "st": "Succeeded",
+   "props": {}
+  },
+  {
+   "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-a/providers/Microsoft.Network/networkInterfaces/nic-1",
+   "name": "nic-1",
+   "type": "microsoft.network/networkinterfaces",
+   "location": "koreacentral",
+   "resourceGroup": "rg-a",
+   "st": "Succeeded",
+   "props": {
+    "ipConfigurations": [
+     {
+      "properties": {
+       "subnet": {
+        "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-a/providers/Microsoft.Network/virtualNetworks/vnet-1/subnets/s1"
+       }
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-a/providers/Microsoft.Compute/virtualMachines/vm-1",
+   "name": "vm-1",
+   "type": "microsoft.compute/virtualmachines",
+   "location": "koreacentral",
+   "resourceGroup": "rg-a",
+   "st": "PowerState/running",
+   "props": {
+    "networkProfile": {
+     "networkInterfaces": [
+      {
+       "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-a/providers/Microsoft.Network/networkInterfaces/nic-1"
+      }
+     ]
+    },
+    "self": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-a/providers/Microsoft.Compute/virtualMachines/vm-1"
+   }
+  },
+  {
+   "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-b/providers/Microsoft.Storage/storageAccounts/st1",
+   "name": "st1",
+   "type": "microsoft.storage/storageaccounts",
+   "location": "japaneast",
+   "resourceGroup": "rg-b",
+   "st": "Succeeded",
+   "props": {}
+  },
+  {
+   "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-b/providers/Microsoft.App/containerApps/ca-1",
+   "name": "ca-1",
+   "type": "microsoft.app/containerapps",
+   "location": "koreacentral",
+   "resourceGroup": "rg-b",
+   "st": "Running",
+   "props": {
+    "identity": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-b/providers/Microsoft.ManagedIdentity/userAssignedIdentities/id-1",
+    "store": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-b/providers/Microsoft.Storage/storageAccounts/st1/blobServices/default",
+    "missing": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-z/providers/Microsoft.Sql/servers/nope"
+   }
+  },
+  {
+   "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-b/providers/Microsoft.ManagedIdentity/userAssignedIdentities/id-1",
+   "name": "id-1",
+   "type": "microsoft.managedidentity/userassignedidentities",
+   "location": "koreacentral",
+   "resourceGroup": "rg-b",
+   "st": "Succeeded",
+   "props": {}
+  },
+  {
+   "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-c/providers/Microsoft.Network/dnszones/example.com",
+   "name": "example.com",
+   "type": "microsoft.network/dnszones",
+   "location": "global",
+   "resourceGroup": "rg-c",
+   "st": "",
+   "props": {}
+  }
+ ],
+ "rgs": [
+  {
+   "name": "rg-a",
+   "location": "koreacentral"
+  },
+  {
+   "name": "rg-empty",
+   "location": "koreacentral"
+  }
+ ]
+}

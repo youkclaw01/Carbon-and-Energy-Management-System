@@ -1,0 +1,4 @@
+---
+layout: null
+---
+{"title":{{ site.title | jsonify }},"posts":[{% for p in site.posts limit:10 %}{"date":"{{ p.date | date: '%Y-%m-%d' }}","title":{{ p.title | jsonify }},"summary":{{ p.summary | jsonify }},"url":"{{ p.url | absolute_url }}"}{% unless forloop.last %},{% endunless %}{% endfor %}]}
