@@ -40,6 +40,7 @@ Resource names are illustrative (`cems-prd-<region>-...`).
 - [Deployment notes](docs/DEPLOYMENT.md)
 - [Demo scenario](docs/DEMO.md)
 - [Limitations and open decisions](docs/LIMITATIONS.md)
+- [Release v2](docs/RELEASE-V2.md)
 
 ## License
 
