@@ -1,0 +1,14 @@
+/* v7.45 메뉴·가독성 통일 — 카드 제목·묶음 메뉴·하위 탭·여백 */
+/* 카드 제목 한 가지 규격 */
+.view .card h3,.view .card h4{font-size:13px;font-weight:600;letter-spacing:-.01em;line-height:1.35}
+/* 왼쪽 메뉴 묶음 이름: 접힌 상태는 가는 구분선, 펼치면 이름 */
+#nav .ng-cap{height:1px;margin:8px 10px 6px;background:var(--line,#d9dee5);overflow:hidden;font-size:0;color:transparent;white-space:nowrap}
+.side:hover #nav .ng-cap,.side:focus-within #nav .ng-cap,.side.open #nav .ng-cap{height:auto;margin:12px 12px 2px;background:none;font-size:11px;font-weight:600;letter-spacing:.08em;color:var(--mut,#667384)}
+/* 하위 탭: 보기 영역과 같은 좌우 끝선 */
+#subtabs{display:flex;align-items:center;gap:6px;flex-wrap:wrap;margin:-4px 0 0;padding:0}
+#subtabs[hidden]{display:none}
+#subtabs .st-cap{font-size:11px;font-weight:600;letter-spacing:.08em;color:var(--mut,#667384);margin-right:8px;padding-right:12px;border-right:1px solid var(--line,#d9dee5)}
+#subtabs a{font-size:12.5px;font-weight:500;padding:6px 14px;border-radius:999px;border:1px solid var(--line,#d9dee5);background:transparent;color:var(--mut,#667384);text-decoration:none;transition:background .2s,color .2s}
+#subtabs a:hover{background:rgba(94,112,134,.1);color:var(--txt,#1d2530)}
+#subtabs a.on{background:#5e7086;border-color:#5e7086;color:#fff}
+@media(max-width:720px){#nav .ng-cap{display:none}#subtabs{gap:4px}#subtabs .st-cap{display:none}#subtabs a{padding:5px 10px;font-size:12px}}
