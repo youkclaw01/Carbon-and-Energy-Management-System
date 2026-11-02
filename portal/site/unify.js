@@ -40,11 +40,7 @@
     });
   }
 
-  /* 3) 첫 화면 제목을 다른 화면처럼 한국어로(영어 화면은 기존 번역표가 처리) */
-  function fixTitle() {
-    if (typeof TITLES === 'undefined') return; if (TITLES.overview === 'Asia Plant Control Center') TITLES.overview = '아시아 공장 종합 관제';
-    const t = $1('#title'); if (t && curKey() === 'overview' && t.textContent === 'Asia Plant Control Center') t.textContent = TITLES.overview;
-  }
+  /* 3) 첫 화면 제목 "Asia Plant Control Center"는 의도된 표기(사용자 2026-11-02)이므로 바꾸지 않는다 */
 
   /* 4) 같은 줄에 놓인 카드는 아래 끝선을 맞춘다(짧은 카드를 늘림, 내용은 그대로) */
   function eqRows() {
@@ -79,11 +75,11 @@
   }
 
   let timer = 0;
-  function pass() { [regroup, renderTabs, fixTitle, fontFloor, eqRows].forEach(f => { try { f(); } catch (e) { console.warn('unify', f.name, e && e.message); } }); }
+  function pass() { [regroup, renderTabs, fontFloor, eqRows].forEach(f => { try { f(); } catch (e) { console.warn('unify', f.name, e && e.message); } }); }
   function later() { clearTimeout(timer); timer = setTimeout(pass, 220); }
   function init() {
     pass();
-    window.addEventListener('hashchange', () => { renderTabs(); fixTitle(); [400, 1400, 3200, 6000].forEach(ms => setTimeout(pass, ms)); });
+    window.addEventListener('hashchange', () => { renderTabs(); [400, 1400, 3200, 6000].forEach(ms => setTimeout(pass, ms)); });
     window.addEventListener('resize', later);
     const v = $1('#view'); if (v) { new MutationObserver(later).observe(v, { childList: true, subtree: true }); if (window.ResizeObserver) new ResizeObserver(later).observe(v); }
     const n = $1('#nav'); if (n) new MutationObserver(() => { regroup(); renderTabs(); }).observe(n, { childList: true });
