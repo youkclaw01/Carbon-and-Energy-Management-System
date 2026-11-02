@@ -12,3 +12,11 @@
 #subtabs a:hover{background:rgba(94,112,134,.1);color:var(--txt,#1d2530)}
 #subtabs a.on{background:#5e7086;border-color:#5e7086;color:#fff}
 @media(max-width:720px){#nav .ng-cap{display:none}#subtabs{gap:4px}#subtabs .st-cap{display:none}#subtabs a{padding:5px 10px;font-size:12px}}
+
+/* v7.50 끝선 통일: 2열 행은 1:1(788/788), 본문+보조는 2:1·1:2(3열 행과 같은 끝선), 5칸 행은 같은 폭 */
+@media(min-width:1001px){
+  .view .gsec,.view .row.r2,.view .fx-cols{grid-template-columns:minmax(0,1fr) minmax(0,1fr)!important}
+  html[data-lux] .view .fx-sites,.view .fx-sites{grid-template-columns:repeat(5,minmax(0,1fr))!important;gap:12px!important}
+  .ls-grid{grid-template-columns:calc((100% - 24px)/3*2 + 12px) minmax(0,1fr)!important}
+  .view .ag-wrap{grid-template-columns:calc((100% - 24px)/3) minmax(0,1fr)!important}
+}

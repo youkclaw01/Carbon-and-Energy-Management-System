@@ -55,10 +55,10 @@
       rows.forEach(r => {
         if (r.length < 2) return; const mx = Math.max(...r.map(x => x.b));
         r.forEach(x => {
-          const d = mx - x.b; if (d <= 2 || d >= 600) return;
+          const d = mx - x.b; if (d <= 0.4 || d >= 600) return;
           const cs = [x.c, ...x.c.querySelectorAll('.card')].filter(c => c.classList.contains('card')); if (!cs.length) return;
           const tgt = cs.reduce((m, c) => (c.getBoundingClientRect().bottom > m.getBoundingClientRect().bottom ? c : m));
-          tgt.style.minHeight = Math.ceil(tgt.getBoundingClientRect().height + d) + 'px'; tgt.dataset.eq = '1';
+          tgt.style.minHeight = (tgt.getBoundingClientRect().height + d).toFixed(2) + 'px'; tgt.dataset.eq = '1';
         });
       });
     });
